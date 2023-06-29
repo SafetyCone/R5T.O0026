@@ -1,21 +1,22 @@
 <Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
+  <PropertyGroup Label="Main">
     <TargetFramework>net6.0</TargetFramework>
-    <Version>1.0.0</Version>
+    <OutputType>Library</OutputType>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <NoWarn>1591</NoWarn>
+    <NoWarn>1573;1587;1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Label="Package">
+    <Version>1.0.0</Version>
     <Authors>DCoats</Authors>
     <Company>Rivet</Company>
-    <Copyright>Copyright (c) Rivet 2023</Copyright>
-    <Description>--- ADD DESCRIPTION ---</Description>
+    <Copyright>Copyright © Rivet 2023</Copyright>
+    <Description>GitHub-related project path operations.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <RepositoryUrl>https://github.com/SafetyCone/R5T.O0026.git</RepositoryUrl>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\R5T.L0035\source\R5T.L0035\R5T.L0035.csproj" />
     <ProjectReference Include="..\..\..\R5T.O0017\source\R5T.O0017\R5T.O0017.csproj" />
     <ProjectReference Include="..\..\..\R5T.T0172\source\R5T.T0172\R5T.T0172.csproj" />
-    <ProjectReference Include="..\R5T.O0026.O001\R5T.O0026.O001.csproj" />
-    <ProjectReference Include="..\R5T.O0026.O002\R5T.O0026.O002.csproj" />
   </ItemGroup>
 </Project>
