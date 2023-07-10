@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup Label="Main">
     <TargetFramework>net6.0</TargetFramework>
     <OutputType>Library</OutputType>
@@ -10,12 +10,13 @@
     <Authors>DCoats</Authors>
     <Company>Rivet</Company>
     <Copyright>Copyright © Rivet 2023</Copyright>
-    <Description>Visual Studio-related project path operations.</Description>
+    <Description>MSBuild output related project file path operations.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\R5T.L0035\source\R5T.L0035\R5T.L0035.csproj" />
-    <ProjectReference Include="..\..\..\R5T.F0129\source\R5T.F0129\R5T.F0129.csproj" />
+    <ProjectReference Include="..\..\..\R5T.T0172\source\R5T.T0172\R5T.T0172.csproj" />
+    <ProjectReference Include="..\..\..\R5T.F0040\source\R5T.F0040\R5T.F0040.csproj" />
   </ItemGroup>
 </Project>
