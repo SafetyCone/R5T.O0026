@@ -33,5 +33,29 @@ namespace R5T.O0026.O003
         {
             return this.Get_DocumentationXmlFilePaths(projectFilePath).First();
         }
+
+
+        public IDictionary<IProjectFilePath, IDocumentationXmlFilePath> Get_DocumentationXmlFilePathsByProjectFilePath(
+            IEnumerable<IProjectFilePath> projectFilePaths)
+        {
+            var output = projectFilePaths
+                .Select(projectFilePath =>
+                {
+                    var documentationFilePath = Instances.ProjectPathsOperator.GetDocumentationFilePathForProjectFilePath(projectFilePath.Value)
+                        .ToDocumentationXmlFilePath();
+
+                    return (projectFilePath, documentationFilePath);
+                })
+                .ToDictionary(
+                    x => x.projectFilePath,
+                    x => x.documentationFilePath);
+
+            return output;
+        }
+
+        public IDictionary<IProjectFilePath, IDocumentationXmlFilePath> Get_DocumentationXmlFilePathsByProjectFilePath(params IProjectFilePath[] projectFilePaths)
+        {
+            return this.Get_DocumentationXmlFilePathsByProjectFilePath(projectFilePaths.AsEnumerable());
+        }
     }
 }
