@@ -22,7 +22,7 @@ namespace R5T.O0026.O002
             var projectDirectoryPath = Instances.ProjectPathsOperator.Get_ProjectDirectoryPath(projectFilePath);
             var projectFileName = Instances.ProjectPathsOperator.Get_ProjectFileName(projectFilePath);
 
-            var fileExtensionSeparatorCharacter = Instances.FileExtensionOperator.GetFileExtensionSeparator_Char();
+            var fileExtensionSeparatorCharacter = Instances.FileExtensionOperator.Get_FileExtensionSeparator_Character();
 
             var hasIndexOfFirstFileExtensionsSeparator = Instances.StringOperator.IndexOf(
                 fileExtensionSeparatorCharacter,
